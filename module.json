@@ -1,0 +1,45 @@
+{
+    "id": "mrkb-background-display",
+    "title": "MRKB Background Display",
+    "description": "<p>MRKB's Foundry VTT Background Display</p>",
+    "version": "1.0.0",
+    "compatibility": {
+        "minimum": "13",
+        "verified": "13.351"
+    },
+    "authors": [
+        {
+            "name": "MRKB",
+            "discord": "mrkb",
+            "flags": {}
+        }
+    ],
+    "relationships": {
+    },
+    "esmodules": [
+        "main.mjs"
+    ],
+    "styles": [
+        "style.css"
+    ],
+    "languages": [
+        {
+            "lang": "ko",
+            "name": "한국어",
+            "path": "lang/ko.json"
+        },
+        {
+            "lang": "ja",
+            "name": "日本語",
+            "path": "lang/ja.json"
+        },
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+    ],
+    "url": "https://github.com/MaronKB/fvtt-background-display",
+    "manifest": "https://raw.githubusercontent.com/MaronKB/fvtt-background-display/refs/heads/master/module.json",
+    "download": "https://github.com/MaronKB/fvtt-background-display/archive/master.zip"
+}

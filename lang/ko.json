@@ -1,0 +1,15 @@
+{
+    "MRKB": {
+        "Display": "디스플레이",
+        "VisibleDisplay": "디스플레이 보이기",
+        "InvisibleDisplay": "디스플레이 숨기기",
+        "BackgroundDisplay": "배경으로 보이기",
+        "ImageBrowser": "이미지 브라우저",
+        "RemoveImage": "이미지 제거",
+        "DisplaySize": "디스플레이 크기",
+        "DisplaySizeHint": "디스플레이 크기를 설정합니다. '내접'은 이미지가 캔버스에 맞게 조정되며, '외접'은 캔버스 전체를 덮도록 조정됩니다. '동시'는 내접하는 이미지 뒤에 외접하는 이미지를 흐릿하게 덧붙입니다.",
+        "DisplaySizeContain": "내접",
+        "DisplaySizeCover": "외접",
+        "DisplaySizeMulti": "동시"
+    }
+}

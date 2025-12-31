@@ -1,0 +1,15 @@
+{
+    "MRKB": {
+        "Display": "ディスプレイ",
+        "VisibleDisplay": "ディスプレイを表示",
+        "InvisibleDisplay": "ディスプレイを非表示",
+        "BackgroundDisplay": "背景として表示",
+        "ImageBrowser": "画像ブラウザ",
+        "RemoveImage": "画像を削除",
+        "DisplaySize": "ディスプレイサイズ",
+        "DisplaySizeHint": "ディスプレイサイズを設定します。'内接'は画像がキャンバスに合わせて調整され、'外接'はキャンバス全体を覆うように調整されます。'同時'は内接する画像の後ろに外接する画像をぼかして重ねます。",
+        "DisplaySizeContain": "内接",
+        "DisplaySizeCover": "外接",
+        "DisplaySizeMulti": "同時"
+    }
+}
