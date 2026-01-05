@@ -39,7 +39,7 @@
             "path": "lang/en.json"
         }
     ],
-    "url": "https://github.com/MaronKB/fvtt-background-display",
-    "manifest": "https://raw.githubusercontent.com/MaronKB/fvtt-background-display/refs/heads/master/module.json",
-    "download": "https://github.com/MaronKB/fvtt-background-display/archive/master.zip"
+    "url": "https://github.com/mrkb-fvtt-modules/fvtt-background-display",
+    "manifest": "https://raw.githubusercontent.com/mrkb-fvtt-modules/fvtt-background-display/refs/heads/master/module.json",
+    "download": "https://github.com/mrkb-fvtt-modules/fvtt-background-display/archive/master.zip"
 }

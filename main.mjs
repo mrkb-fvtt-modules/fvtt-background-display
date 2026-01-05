@@ -43,7 +43,6 @@ Hooks.once("ready", () => {
 });
 Hooks.on("getSceneControlButtons", (sceneControls) => {
     if (!game.user.isGM) return;
-    console.log(sceneControls);
     Display.getControlButtons(sceneControls);
 });
 
