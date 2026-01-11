@@ -152,7 +152,7 @@ class Display {
 }
 
 
-class ImageBrowser extends FilePicker {
+class ImageBrowser extends foundry.applications.apps.FilePicker.implementation {
     constructor(options = {
         id: "file-picker",
         type: "image",
