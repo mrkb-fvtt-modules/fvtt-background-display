@@ -1,5 +1,7 @@
 # MRKB Background Display
 
+---
+
 ## Overview
 MRKB Background Display is a small Foundry VTT module that provides a persistent display widget on the scene canvas which can show a custom image as a foreground widget or as a background overlay.
 
@@ -16,8 +18,6 @@ This repository contains the module manifest and the minimal implementation (ES 
 - Foundry VTT 13.x (module manifest sets minimum: 13, verified: 13.351)
 - Module ID: `mrkb-background-display`
 - Version: 1.0.0
-- Repository: https://github.com/mrkb-fvtt-modules/fvtt-background-display
-- Manifest URL: `https://raw.githubusercontent.com/mrkb-fvtt-modules/fvtt-background-display/refs/heads/master/module.json`
 
 ## Installation (Foundry)
 1. Open Foundry VTT and go to Settings → Add-on Modules → Install Module.
@@ -64,8 +64,6 @@ These settings are updated when you use the scene control buttons or the image b
 - If using the `multi` sizing mode, provide a high-resolution image so the blurred background looks good when scaled up.
 
 ---
-
-# 한국어 설명
 
 ## 개요
 MRKB Background Display는 Foundry VTT 장면 캔버스 위에 표시되는 작은 디스플레이 위젯을 제공합니다. 이 위젯은 사용자 지정 이미지를 전경 위젯으로 표시하거나 배경 오버레이로 사용할 수 있습니다.
@@ -120,3 +118,61 @@ MRKB Background Display는 Foundry VTT 장면 캔버스 위에 표시되는 작�
 - 지원 형식: PNG, JPEG, GIF(Foundry/파일 서버에 따라 달라질 수 있음).
 - 장면과 동일한 종횡비의 이미지를 사용하거나 `cover` 모드를 사용하여 캔버스를 채우는 것을 권장합니다.
 - `multi` 모드 사용 시 흐릿한 배경 효과를 위해 고해상도 이미지를 사용하는 것이 좋습니다.
+
+---
+
+## 概要
+MRKB Background DisplayはFoundry VTTのシーンキャンバス上に表示される小さなディスプレイウィジェットを提供します。ウィジェットはカスタム画像を前景ウィジェットとして表示するか、背景オーバーレイとして適用できます。
+
+## 特徴
+- シーンにカスタム画像を表示するディスプレイウィジェットを提供
+- 3つの表示モード: オフ（off）、画像（image）、背景（background）
+- Foundryのファイルブラウザから画像を選択可能
+- サイズ挙動: `contain`（内接）、`cover`（外接）、`multi`（前景を内接、背景をぼかした外接を同時表示）
+- 多言語対応（English、한국어、日本語）
+
+## 互換性
+- Foundry VTT 13.x（module manifest は最低: 13、検証: 13.351）
+- モジュールID: `mrkb-background-display`
+- バージョン: 1.0.0
+
+## インストール（Foundry）
+1. Foundry VTTで Settings → Add-on Modules → Install Module を開きます。
+2. マニフェストURLを「Manifest URL」に貼り付けて Install をクリックします。
+3. インストール後、Manage Modules でモジュールを有効化します。
+
+ローカル開発（任意）: リポジトリを Foundry の `Data/modules/` にコピーして有効化してください。
+
+## 使い方
+モジュールを有効化すると、シーンクontrols に `Display` グループが追加されます（GM のみ表示）。主なボタン:
+- ディスプレイ表示: モードを `image` にしてウィジェットを表示します。
+- ディスプレイ非表示: モードを `off` にしてウィジェットを隠します。
+- 背景として表示: モードを `background` にして画像を背景オーバーレイにします。
+- 画像ブラウザ: Foundry の画像ブラウザを開いて画像を選択します（選択すると自動で設定されます）。
+- 画像削除: 設定済みの画像をクリアします。
+
+ウィジェットはキャンバス要素の直後に挿入され、`multi` モードをサポートするために前景と背景の2つの `img` 要素を含みます。
+
+## 設定
+World スコープの設定（コードまたはモジュール設定画面から参照/変更可能）:
+
+- `mrkb-background-display.mode` (String)
+  - 説明: 現在の表示モード
+  - 選択肢: `off`, `image`, `background`
+  - デフォルト: `image`
+
+- `mrkb-background-display.image` (String)
+  - 説明: 表示する画像のURL/パス
+  - デフォルト: `""`（空）
+
+- `mrkb-background-display.size` (String)
+  - 説明: キャンバス上での画像のサイズ挙動
+  - 選択肢: `contain`（内接）、`cover`（外接）、`multi`（同時）
+  - デフォルト: `multi`
+
+これらの設定はシーングループのボタンや画像ブラウザで更新され、World スコープなのでワールド内の全ユーザーで共有されます。
+
+## 画像の推奨
+- サポート形式: PNG、JPEG、GIF（Foundry / ファイルサーバーに依存）
+- 最良の見栄えのため、シーンと同じアスペクト比の画像を使用するか、キャンバスを埋めるために `cover` モードを使用することを推奨します。
+- `multi` モードを使用する場合、ぼかした背景が拡大されても綺麗に見える高解像度の画像を推奨します。
