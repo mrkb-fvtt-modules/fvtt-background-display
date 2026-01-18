@@ -10,7 +10,7 @@ Hooks.once("init", () => {
             "image": "Image",
             "background": "Background"
         },
-        default: "image",
+        default: "off",
         onChange: (value) => Display.remoteMode(value)
     });
     game.settings.register("mrkb-background-display", "image", {
