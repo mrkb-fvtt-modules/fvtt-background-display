@@ -2,7 +2,7 @@
     "id": "mrkb-background-display",
     "title": "MRKB's Background Display",
     "description": "<p>MRKB's Foundry VTT Background Display</p>",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "compatibility": {
         "minimum": "13",
         "verified": "13.351"

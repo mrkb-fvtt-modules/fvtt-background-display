@@ -71,6 +71,7 @@ class Display {
                 name: "visible",
                 title: "MRKB.VisibleDisplay",
                 icon: "fa-solid fa-eye",
+                order: 1,
                 active: Display.getMode() === "image",
                 onChange: () => Display.setMode("image")
             },
@@ -78,6 +79,7 @@ class Display {
                 name: "invisible",
                 title: "MRKB.InvisibleDisplay",
                 icon: "fa-solid fa-eye-slash",
+                order: 2,
                 active: Display.getMode() === "off",
                 onChange: () => Display.setMode("off")
             },
@@ -85,6 +87,7 @@ class Display {
                 name: "background",
                 title: "MRKB.BackgroundDisplay",
                 icon: "fa-solid fa-image-portrait",
+                order: 3,
                 active: Display.getMode() === "background",
                 onChange: () => Display.setMode("background")
             },
@@ -92,6 +95,7 @@ class Display {
                 name: "browser",
                 title: "MRKB.ImageBrowser",
                 icon: "fa-solid fa-folder",
+                order: 98,
                 button: true,
                 onChange: () => Display.openImageBrowser()
             },
@@ -99,6 +103,7 @@ class Display {
                 name: "remove",
                 title: "MRKB.RemoveImage",
                 icon: "fa-solid fa-trash",
+                order: 99,
                 button: true,
                 onChange: () => Display.setImage("")
             }
