@@ -56,12 +56,44 @@ The module registers the following world-scoped settings (accessible by code or 
   - Choices: `contain` (내접), `cover` (외접), `multi` (동시)
   - Default: `multi`
 
+- `mrkb-background-display.position` (String)
+  - Purpose: How the image is positioned on the canvas
+  - Choices: `top`, `center`, `bottom`
+  - Default: `center`
+
+- `mrkb-background-display.opacity` (Number)
+  - Purpose: How opaque the image is on the canvas
+  - Range: 0 to 1
+  - Default: `0.2`
+
 These settings are updated when you use the scene control buttons or the image browser. They are world-scoped so the state is shared among all users in the world.
 
 ## Image recommendations
 - Supported formats: PNG, JPEG, GIF (depends on Foundry/file server).
 - For best visual results use images with the same aspect ratio as your scene or use `cover` sizing to fill the canvas.
 - If using the `multi` sizing mode, provide a high-resolution image so the blurred background looks good when scaled up.
+
+## API
+
+If you want to modify the image with macros or otherwise, you can access the API like this:
+
+```javascript
+const backgroundDisplayModule = game.modules.get('mrkb-background-display')
+const api = backgroundDisplayModule.API
+```
+
+The API provides access to the following methods:
+
+* `getMode()`: Returns the current display mode.
+* `setMode(mode)`: Set the display mode (`off`, `image`, `background`).
+* `getImage()`: Returns the current image.
+* `setImage(image)`: Set the image path.
+* `getSize()`: Returns the current display size.
+* `setSize(size)`: Set the image size (`contain`, `conver`, `multi`).
+* `getPosition()`: Returns the current display position.
+* `setPosition(position)`: Set the display position (`top`, `center`, `bottom`).
+* `getOpacity()`: Returns the current display opacity.
+* `setOpacity(opacity)`: Set the display opacity (`0 - 1`).
 
 ---
 
